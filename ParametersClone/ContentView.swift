@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAirplaneModeOn = false
     var parameter: Parameter
-    
+
+
     var body: some View {
         NavigationView {
-            Form {
+            List {
                 Section {
                     HStack{
                         Image("creamy")
@@ -30,31 +31,29 @@ struct ContentView: View {
                         }
                     }
                 }
-                Section {
-                    ForEach(parameters) { parameter in
-                        HStack {
-                        Image(systemName : parameter.sfSymbolImage)
-                                .foregroundColor(.white)
-                                .padding(5)
-                                .background(parameter.backgroundColor)
-                                .cornerRadius(7)
-                        Text(parameter.name)
-                            
-                                
-                            
+                ForEach(parametersSection.allCases, id: \.rawValue ) { section in
+                    Section(header: Text(section.rawValue)) {
+                        ForEach(parameters) { parameter in
+                            HStack {
+                                Image(systemName : parameter.sfSymbolImage)
+                                    .foregroundColor(.white)
+                                    .padding(7)
+                                    .background(parameter.backgroundColor)
+                                    .cornerRadius(7)
+                                Text(parameter.name)
+                            }
                         }
                     }
                 }
                 
             }
-          
+            .navigationTitle("Réglages")
         }
-        .navigationTitle("Réglages")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange))
+        ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange, sfSymbolColor: .white, paremeterSection: .connection))
     }
 }
