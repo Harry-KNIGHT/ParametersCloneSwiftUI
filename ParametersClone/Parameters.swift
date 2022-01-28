@@ -14,19 +14,15 @@ struct Parameter: Identifiable {
     let name: String
     let backgroundColor: Color
     let sfSymbolColor: Color
-    let paremeterSection: parametersSection
+    let paremeterSection: parameterSection
+    
+  
 }
 
-enum parametersSection: String, CaseIterable {
-    case connection = "Connection"
-    case notification = "Notification"
-    case general = "Général"
-    case appWallet = "AppWallet"
-    case iosApp1 = "iOSApp1"
-    case iosApp2 = "iOSApp2"
-    case fournisseurTv = "Free, il a tout compris"
-    case allApp = "All App"
+enum parameterSection: CaseIterable {
+    case connection, notification, general, appWallet, iosApp1, iosApp2, fournisseurTv, allApp
 }
+
 
 var parameters: [Parameter] = [
     Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange, sfSymbolColor: .white, paremeterSection: .connection),

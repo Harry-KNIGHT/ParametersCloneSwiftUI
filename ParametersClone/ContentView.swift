@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAirplaneModeOn = false
     var parameter: Parameter
-
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -31,17 +30,21 @@ struct ContentView: View {
                         }
                     }
                 }
-                ForEach(parametersSection.allCases, id: \.rawValue ) { section in
-                    Section(header: Text(section.rawValue)) {
-                        ForEach(parameters) { parameter in
-                            HStack {
-                                Image(systemName : parameter.sfSymbolImage)
-                                    .foregroundColor(.white)
-                                    .padding(7)
-                                    .background(parameter.backgroundColor)
-                                    .cornerRadius(7)
-                                Text(parameter.name)
-                            }
+                
+               // ForEach(parameters.map({$0.parameterSection == section}))
+                
+                ForEach(parameterSection.allCases, id: \.self) { section in
+                    Section() {
+                        ForEach(parameters.filter({$0.parameterSection == section})) {
+                            parameter in
+                                HStack {
+                                    Image(systemName : parameter.sfSymbolImage)
+                                        .foregroundColor(.white)
+                                        .padding(7)
+                                        .background(parameter.backgroundColor)
+                                        .cornerRadius(7)
+                                    Text(parameter.name)
+                                }
                         }
                     }
                 }
