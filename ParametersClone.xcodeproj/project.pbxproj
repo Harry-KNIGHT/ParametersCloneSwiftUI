@@ -12,6 +12,7 @@
 		3C4B338427A400DE00534E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B338327A400DE00534E51 /* Assets.xcassets */; };
 		3C4B338727A400DE00534E51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B338627A400DE00534E51 /* Preview Assets.xcassets */; };
 		3C4B338E27A483D000534E51 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B338D27A483D000534E51 /* Parameters.swift */; };
+		3CF76B7627A6D4CF00A9A089 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF76B7527A6D4CF00A9A089 /* Square.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3C4B338327A400DE00534E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C4B338627A400DE00534E51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C4B338D27A483D000534E51 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		3CF76B7527A6D4CF00A9A089 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				3C4B337F27A400DD00534E51 /* ParametersCloneApp.swift */,
 				3C4B338127A400DD00534E51 /* ContentView.swift */,
+				3CF76B7527A6D4CF00A9A089 /* Square.swift */,
 				3C4B338D27A483D000534E51 /* Parameters.swift */,
 				3C4B338327A400DE00534E51 /* Assets.xcassets */,
 				3C4B338527A400DE00534E51 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF76B7627A6D4CF00A9A089 /* Square.swift in Sources */,
 				3C4B338227A400DD00534E51 /* ContentView.swift in Sources */,
 				3C4B338027A400DD00534E51 /* ParametersCloneApp.swift in Sources */,
 				3C4B338E27A483D000534E51 /* Parameters.swift in Sources */,

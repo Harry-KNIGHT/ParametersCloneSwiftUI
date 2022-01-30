@@ -30,20 +30,20 @@ struct ContentView: View {
                         }
                     }
                 }
-                
-               // ForEach(parameters.map({$0.parameterSection == section}))
-                
-                ForEach(parameterSection.allCases, id: \.self) { section in
+                ForEach(ParameterSection.allCases, id: \.self) { section in
                     Section() {
                         ForEach(parameters.filter({$0.parameterSection == section })) { parameter in
+                            NavigationLink(destination: Text("Hello !")) {
                                 HStack {
-                                    Image(systemName : parameter.sfSymbolImage)
-                                        .foregroundColor(.white)
-                                        .padding(7)
-                                        .background(parameter.backgroundColor)
-                                        .cornerRadius(7)
+                                    ZStack {
+                                        Square(parameter: parameter)
+                                        Image(systemName : parameter.sfSymbolImage)
+                                            .foregroundColor(parameter.sfSymbolColor)
+                                            .font(.system(size: 17))
+                                    }
                                     Text(parameter.name)
                                 }
+                            }
                         }
                     }
                 }
