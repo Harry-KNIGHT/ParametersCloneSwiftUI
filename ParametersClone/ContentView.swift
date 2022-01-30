@@ -35,8 +35,7 @@ struct ContentView: View {
                 
                 ForEach(parameterSection.allCases, id: \.self) { section in
                     Section() {
-                        ForEach(parameters.filter({$0.parameterSection == section})) {
-                            parameter in
+                        ForEach(parameters.filter({$0.parameterSection == section })) { parameter in
                                 HStack {
                                     Image(systemName : parameter.sfSymbolImage)
                                         .foregroundColor(.white)
@@ -57,6 +56,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange, sfSymbolColor: .white, paremeterSection: .connection))
+        ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange, sfSymbolColor: .white, parameterSection: .connection))
     }
 }

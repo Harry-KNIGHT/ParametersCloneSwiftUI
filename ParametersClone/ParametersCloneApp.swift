@@ -11,7 +11,7 @@ import SwiftUI
 struct ParametersCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode zobe", backgroundColor: .orange, sfSymbolColor: .white,paremeterSection: .connection))
+            ContentView(parameter: Parameter(sfSymbolImage: "airplane", name: "Mode zobe", backgroundColor: .orange, sfSymbolColor: .white, parameterSection: .connection))
         }
     }
 }
