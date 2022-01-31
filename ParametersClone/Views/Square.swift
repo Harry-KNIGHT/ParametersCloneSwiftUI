@@ -26,6 +26,10 @@ struct Square: View {
 
 struct Square_Previews: PreviewProvider {
     static var previews: some View {
-        Square(parameter: Parameter(sfSymbolImage: "phone", name: "Call", backgroundColor: .blue, sfSymbolColor: .green, parameterSection: .general))
+        Group {
+            Square(parameter: Parameter(sfSymbolImage: "phone", name: "Call", backgroundColor: .blue, sfSymbolColor: .green, parameterSection: .general))
+            Square(parameter: Parameter(sfSymbolImage: "phone", name: "Call", backgroundColor: .blue, sfSymbolColor: .green, parameterSection: .general))
+                .preferredColorScheme(.dark)
+        }
     }
 }

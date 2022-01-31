@@ -1,41 +1,26 @@
 //
-//  Parameters.swift
+//  ParameterRessources.swift
 //  ParametersClone
 //
-//  Created by Elliot Knight on 28/01/2022.
+//  Created by Elliot Knight on 31/01/2022.
 //
 
 import Foundation
-import SwiftUI
 
-struct Parameter: Identifiable {
-    var id = UUID()
-    let sfSymbolImage: String
-    let name: String
-    let backgroundColor: Color
-    let sfSymbolColor: Color
-    let parameterSection: ParameterSection
-    
-    
-}
-
-enum ParameterSection: String, CaseIterable {
-    case connection, notification, general, appWallet, iosApp1, iosApp2, fournisseurTv, allApp
-}
 
 var parameters: [Parameter] = [
     // Connection
     Parameter(sfSymbolImage: "airplane", name: "Mode avion", backgroundColor: .orange, sfSymbolColor: .white, parameterSection: .connection),
     Parameter(sfSymbolImage: "wifi", name: "Wi-Fi", backgroundColor: .blue, sfSymbolColor: .white, parameterSection: .connection),
-    Parameter(sfSymbolImage: "airpods.gen3", name: "Bluetooth", backgroundColor: .blue, sfSymbolColor: .white, parameterSection: .connection),
+    Parameter(sfSymbolImage: "network", name: "Bluetooth", backgroundColor: .blue, sfSymbolColor: .white, parameterSection: .connection),
     Parameter(sfSymbolImage: "antenna.radiowaves.left.and.right", name: "Données cellulaires", backgroundColor: .green, sfSymbolColor: .white, parameterSection: .connection),
     Parameter(sfSymbolImage: "personalhotspot", name: "Partage de connection", backgroundColor: .green, sfSymbolColor: .white, parameterSection: .connection),
     
     // Notifications
     Parameter(sfSymbolImage: "bell.badge", name: "Notifications", backgroundColor: .red, sfSymbolColor: .white, parameterSection: .notification),
     Parameter(sfSymbolImage: "speaker.wave.3", name: "Sons et vibrations", backgroundColor: .red, sfSymbolColor: .white, parameterSection: .notification),
-    Parameter(sfSymbolImage: "moon.fill", name: "Concentration", backgroundColor: .purple, sfSymbolColor: .white, parameterSection: .notification),
-    Parameter(sfSymbolImage: "hourglass", name: "Temps d'écran", backgroundColor: .purple, sfSymbolColor: .white, parameterSection: .notification),
+    Parameter(sfSymbolImage: "moon.fill", name: "Concentration", backgroundColor: .indigo, sfSymbolColor: .white, parameterSection: .notification),
+    Parameter(sfSymbolImage: "hourglass", name: "Temps d'écran", backgroundColor: .indigo, sfSymbolColor: .white, parameterSection: .notification),
     
     //Général
     Parameter(sfSymbolImage: "gear", name: "Général", backgroundColor: .gray, sfSymbolColor: .white, parameterSection: .general),
@@ -78,7 +63,7 @@ var parameters: [Parameter] = [
     
     // iOSAPP2
     Parameter(sfSymbolImage: "music.note", name: "Musique", backgroundColor: .red, sfSymbolColor: .white, parameterSection: .iosApp2),
-    Parameter(sfSymbolImage: "photo.on.rectangle.angled", name: "Photos", backgroundColor: .white, sfSymbolColor: .green, parameterSection: .iosApp2),
+    Parameter(sfSymbolImage: "photo.on.rectangle.angled", name: "Photos", backgroundColor: .white, sfSymbolColor: .blue, parameterSection: .iosApp2),
     Parameter(sfSymbolImage: "camera.fill", name: "Appareil photo", backgroundColor: .secondary, sfSymbolColor: .primary, parameterSection: .iosApp2),
     Parameter(sfSymbolImage: "book.fill", name: "Livres", backgroundColor: .orange, sfSymbolColor: .white, parameterSection: .iosApp2),
     Parameter(sfSymbolImage: "mic", name: "Podcasts", backgroundColor: .yellow, sfSymbolColor: .white, parameterSection: .iosApp2),
@@ -91,7 +76,5 @@ var parameters: [Parameter] = [
     
     
 ]
-
-
 
 
