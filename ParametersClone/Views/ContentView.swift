@@ -22,10 +22,12 @@ struct ContentView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(Circle())
-                                .frame(width: 60, height: 60)
+                                .frame(width: 70, height: 70)
+                                .padding(.vertical, 5)
                             VStack(alignment: .leading) {
                                 Text("Elliot Knight")
                                     .font(.title2)
+                                    .padding(.bottom, 2)
                                 Text("Id. Apple, iCloud+, médias et achats")
                                     .font(.caption)
                                     .foregroundColor(.primary)
